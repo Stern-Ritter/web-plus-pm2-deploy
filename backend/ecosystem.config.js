@@ -25,7 +25,7 @@ module.exports = {
       repo: "https://github.com/Stern-Ritter/web-plus-pm2-deploy",
       path: DEPLOY_PATH,
       ssh_options: "StrictHostKeyChecking=no",
-      "pre-deploy": `scp ./*.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
+      "pre-deploy": `scp .env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
       "post-deploy":
         "cd backend && npm i && npm run build && pm2 reload ecosystem.config.js && pm2 save",
     },
