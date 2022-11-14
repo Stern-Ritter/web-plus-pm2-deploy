@@ -7,8 +7,6 @@ const {
   DEPLOY_HOST,
   DEPLOY_PATH,
   DEPLOY_REF,
-  DEPLOY_REPO_USER_NAME,
-  DEPLOY_REPO_NAME,
 } = process.env;
 
 module.exports = {
@@ -24,7 +22,7 @@ module.exports = {
       user: DEPLOY_USER,
       host: DEPLOY_HOST,
       ref: DEPLOY_REF,
-      repo: `https://github.com/${DEPLOY_REPO_USER_NAME}/${DEPLOY_REPO_NAME}.git`,
+      repo: "https://github.com/Stern-Ritter/web-plus-pm2-deploy",
       path: DEPLOY_PATH,
       ssh_options: "StrictHostKeyChecking=no",
       "pre-deploy": `scp ./*.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
