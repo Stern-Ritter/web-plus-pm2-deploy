@@ -27,7 +27,7 @@ module.exports = {
       ssh_options: "StrictHostKeyChecking=no",
       "pre-deploy-local": `scp .env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
       "post-deploy":
-        "cd backend && npm i && npm run build && pm2 start && pm2 save && pm2 restart all",
+        "cd backend && npm i && npm run build && pm2 start",
     },
   },
 };
