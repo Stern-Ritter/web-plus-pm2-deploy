@@ -26,7 +26,7 @@ module.exports = {
       path: DEPLOY_PATH,
       ssh_options: "StrictHostKeyChecking=no",
       "post-deploy":
-        "cd frontend && npm i && npm run build && pm2 reload ecosystem.config.js && pm2 save",
+        "cd frontend && npm i && npm run build && pm2 start ecosystem.config.js && pm2 save",
     },
   },
 };

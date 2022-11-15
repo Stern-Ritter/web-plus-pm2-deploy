@@ -139,6 +139,6 @@ class Api {
   }
   }
   // Замените на адрес вашего бэкенда
-  const api = new Api("api.stern.students.nomoredomains.icu);
+  const api = new Api("api.stern.students.nomoredomains.icu" );
 
   export default api;
