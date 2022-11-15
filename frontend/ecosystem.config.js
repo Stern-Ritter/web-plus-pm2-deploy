@@ -15,7 +15,7 @@ module.exports = {
   apps: [
     {
       name: "frontend",
-      script: "./src/index.js",
+      script: "./build/index.js",
     },
   ],
 
