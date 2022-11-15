@@ -27,7 +27,7 @@ module.exports = {
       path: DEPLOY_PATH,
       ssh_options: "StrictHostKeyChecking=no",
       "post-deploy":
-        `cd frontend && npm i && npm run build`,
+        `cd frontend && npm i && npm run build && scp -Сr ./build/* /var/www/frontend`,
     },
   },
 };
