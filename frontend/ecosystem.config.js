@@ -1,4 +1,6 @@
-require("dotenv").config();
+const dotenv = require('dotenv');
+
+dotenv.config({ path: './.env.deploy' });
 
 const {
   DEPLOY_USER,
